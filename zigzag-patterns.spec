@@ -56,7 +56,6 @@ Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
 Requires:       ucode-intel
-Requires:       ucode-intel-blob
 Requires:       ucode-amd
 Requires:       atmel-firmware
 Requires:       bcm20702a1-firmware
