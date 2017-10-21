@@ -104,9 +104,11 @@ Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
+Requires:       xorg-x11-essentials
 Requires:       xorg-x11-server
 Requires:       xrandr
 Requires:       xdpyinfo
+Requires:       xhost
 Requires:       xorg-x11-fonts
 Requires:       xorg-x11-driver-video
 Requires:       xf86-video-amdgpu
