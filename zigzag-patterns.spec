@@ -36,6 +36,7 @@ Requires:       rpmconf
 Requires:       ca-certificates-mozilla
 Requires:       mozilla-nss-certs
 Requires:       crda
+Requires:       zigzag-languages
 
 %description base
 Basic system components that should be present on every system
