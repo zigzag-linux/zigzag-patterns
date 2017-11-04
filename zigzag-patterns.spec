@@ -29,6 +29,7 @@ Requires:       lsof
 Requires:       curl
 Requires:       less
 Requires:       tree
+Requires:       tar
 Requires:       patch
 Requires:       colordiff
 Requires:       deltarpm
@@ -62,6 +63,7 @@ Requires:       atmel-firmware
 Requires:       bcm20702a1-firmware
 Requires:       ipw-firmware
 Requires:       zd1211-firmware
+Requires:       bluez-firmware
 Requires:       fwupdate
 
 %description firmware
@@ -110,6 +112,7 @@ Requires:       xorg-x11-server
 Requires:       xrandr
 Requires:       xdpyinfo
 Requires:       xhost
+Requires:       xclip
 Requires:       xorg-x11-fonts
 Requires:       xorg-x11-driver-video
 Requires:       xf86-video-amdgpu
@@ -146,8 +149,11 @@ Provides:       pattern-visible()
 Requires:       sddm
 Requires:       plasma5-session
 Requires:       plasma5-pa
+Requires:       plasma-nm5-openvpn
+Requires:       bluedevil5
 Requires:       ksshaskpass5
 Requires:       pinentry-qt5
+Requires:       kgamma5
 Requires:       kde-gtk-config5-gtk2
 Requires:       kde-gtk-config5-gtk3
 Requires:       gtk2-metatheme-breeze
