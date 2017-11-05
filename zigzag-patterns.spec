@@ -34,6 +34,8 @@ Requires:       patch
 Requires:       colordiff
 Requires:       deltarpm
 Requires:       rpmconf
+Requires:       iproute2
+Requires:       iputils
 Requires:       ca-certificates-mozilla
 Requires:       mozilla-nss-certs
 Requires:       crda
@@ -112,6 +114,8 @@ Requires:       xorg-x11-server
 Requires:       xrandr
 Requires:       xdpyinfo
 Requires:       xhost
+Requires:       xdg-user-dirs
+Requires:       xdg-utils
 Requires:       xclip
 Requires:       xorg-x11-fonts
 Requires:       xorg-x11-driver-video
