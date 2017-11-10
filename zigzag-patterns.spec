@@ -152,6 +152,7 @@ Provides:       pattern-visible()
 
 Requires:       sddm
 Requires:       plasma5-session
+Requires:       plasma5-defaults-zigzag
 Requires:       plasma5-pa
 Requires:       plasma-nm5-openvpn
 Requires:       bluedevil5
