@@ -167,7 +167,6 @@ Requires:       kde-gtk-config5-gtk2
 Requires:       kde-gtk-config5-gtk3
 Requires:       gtk2-metatheme-breeze
 Requires:       gtk3-metatheme-breeze
-Requires:       kio_mtp
 Requires:       kio_iso
 Requires:       pam_kwallet
 Requires:       xdg-desktop-portal-kde
