@@ -21,6 +21,10 @@ Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
+Requires:       sudo
+Requires:       xfsprogs
+Requires:       btrfsprogs
+Requires:       e2fsprogs
 Requires:       finger
 Requires:       timezone
 Requires:       man
