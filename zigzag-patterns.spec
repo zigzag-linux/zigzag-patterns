@@ -170,6 +170,7 @@ Requires:       gtk3-metatheme-breeze
 Requires:       kio_iso
 Requires:       pam_kwallet
 Requires:       xdg-desktop-portal-kde
+Requires:       kdenetwork4-filesharing
 
 %description plasma
 Minimal plasma desktop environment installation
