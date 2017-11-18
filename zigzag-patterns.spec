@@ -132,8 +132,6 @@ Requires:       vaapi-tools
 Requires:       libgstvdpau
 Requires:       libvdpau_va_gl1
 Requires:       libva-vdpau-driver
-Requires:       libva-egl1
-Requires:       libva-glx1
 Requires:       vaapi-intel-driver
 
 %description graphical
