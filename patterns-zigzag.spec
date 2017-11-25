@@ -47,9 +47,22 @@ Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
+# Radeon
 Requires: xf86-video-amdgpu
+Requires: xf86-video-ati
+Requires: libvdpau_radeonsi
+Requires: libvdpau_r600
+
+# nVidia
 Requires: xf86-video-nouveau
+Requires: Mesa-dri-nouveau
+Requires: libvdpau_nouveau
+
+# Intel
 Requires: Mesa-libva
+Requires: intel-vaapi-driver
+Requires: libva-vdpau-driver
+Requires: libvdpau_va_gl
 
 %description xfirmware
 Firmware packages needed for hardware enablement in certain graphical environments
