@@ -55,7 +55,6 @@ Requires: libvdpau_r600
 
 # nVidia
 Requires: xf86-video-nouveau
-Requires: Mesa-dri-nouveau
 Requires: libvdpau_nouveau
 
 # Intel
