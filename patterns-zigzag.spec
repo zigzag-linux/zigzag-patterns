@@ -47,6 +47,8 @@ Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
+Requires:       Mesa-dri
+
 # Radeon
 Requires:       xf86-video-amdgpu
 Requires:       xf86-video-ati
