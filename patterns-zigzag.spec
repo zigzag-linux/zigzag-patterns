@@ -62,6 +62,7 @@ Requires:       libvdpau_nouveau
 # Intel
 Requires:       Mesa-libva
 Requires:       intel-vaapi-driver
+Requires:       intel-hybrid-driver
 Requires:       libva-vdpau-driver
 Requires:       libvdpau_va_gl
 
