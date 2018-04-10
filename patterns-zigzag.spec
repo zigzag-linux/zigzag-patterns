@@ -66,11 +66,6 @@ Requires:       intel-hybrid-driver
 Requires:       libva-vdpau-driver
 Requires:       libvdpau_va_gl
 
-%if 0%{?suse_version} == 1500
-# VirtualBox (kernel < 4.13 does not ship with vboxvideo module)
-Requires:       virtualbox-guest-kmp-default
-%endif
-
 %description xfirmware
 Firmware packages needed for hardware enablement in certain graphical environments
 
