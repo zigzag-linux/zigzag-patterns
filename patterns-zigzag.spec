@@ -66,6 +66,10 @@ Requires:       intel-hybrid-driver
 Requires:       libva-vdpau-driver
 Requires:       libvdpau_va_gl
 
+%if 0%{?suse_version} > 1500 || 0%{?sle_version} >= 150100
+Requires:       intel-media-driver
+%endif
+
 %description xfirmware
 Firmware packages needed for hardware enablement in certain graphical environments
 
