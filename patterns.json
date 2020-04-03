@@ -1,0 +1,76 @@
+{
+    "firmware": {
+        "description": "Firmware packages needed for hardware enablement in certain environments",
+        "packages": [
+            "kernel-firmware",
+            "ucode-intel",
+            "ucode-amd",
+            "atmel-firmware",
+            "bcm20702a1-firmware",
+            "ipw-firmware",
+            "zd1211-firmware"
+        ],
+        "summary": "Zigzag Firmware"
+    },
+    "xfirmware-intel": {
+        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "packages": [
+            "Mesa-dri",
+            "Mesa-libva",
+            "libvulkan1",
+            "libvulkan_intel",
+            "intel-vaapi-driver",
+            "intel-hybrid-driver",
+            "intel-media-driver",
+            "libva-vdpau-driver",
+            "libvdpau_va_gl"
+        ],
+        "summary": "Zigzag Graphical Firmware - Intel"
+    },
+    "xfirmware-nouveau": {
+        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "packages": [
+            "Mesa-dri",
+            "Mesa-dri-nouveau",
+            "xf86-video-nouveau",
+            "libvdpau_nouveau"
+        ],
+        "summary": "Zigzag Graphical Firmware - Radeon"
+    },
+    "xfirmware-radeon": {
+        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "packages": [
+            "Mesa-dri",
+            "libvulkan1",
+            "libvulkan_radeon",
+            "xf86-video-amdgpu",
+            "xf86-video-ati",
+            "libvdpau_radeonsi",
+            "libvdpau_r600",
+            "libvdpau_r300"
+        ],
+        "summary": "Zigzag Graphical Firmware - Nouveau"
+    },
+    "yast": {
+        "description": "Minimal useful distribution of YaST control panel",
+        "packages": [
+            "yast2-control-center-qt",
+            "libyui-qt",
+            "libyui-qt-pkg",
+            "yast2-firewall",
+            "yast2-fonts",
+            "yast2-country",
+            "yast2-users",
+            "yast2-sudo",
+            "yast2-bootloader",
+            "yast2-update",
+            "yast2-online-update-frontend",
+            "yast2-ntp-client",
+            "yast2-sound",
+            "yast2-apparmor",
+            "yast2-sysconfig",
+            "yast2-snapper"
+        ],
+        "summary": "Zigzag YaST"
+    }
+}

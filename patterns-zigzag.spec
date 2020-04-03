@@ -29,6 +29,7 @@ Requires:       bcm20702a1-firmware
 Requires:       ipw-firmware
 Requires:       zd1211-firmware
 
+
 %description firmware
 Firmware packages needed for hardware enablement in certain environments
 
@@ -38,44 +39,84 @@ Firmware packages needed for hardware enablement in certain environments
 
 ################################################################################
 
-%package xfirmware
+%package xfirmware-intel
 %pattern_basetechnologies
-Summary:        Zigzag Graphical Firmware
+Summary:        Zigzag Graphical Firmware - Intel
 Group:          Metapackages
-Provides:       pattern() = zigzag-xfirmware
+Provides:       pattern() = zigzag-xfirmware-intel
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
 Requires:       Mesa-dri
+Requires:       Mesa-libva
+Requires:       libvulkan1
+Requires:       libvulkan_intel
+Requires:       intel-vaapi-driver
+Requires:       intel-hybrid-driver
+Requires:       intel-media-driver
+Requires:       libva-vdpau-driver
+Requires:       libvdpau_va_gl
 
-# Radeon
+
+%description xfirmware-intel
+Firmware packages needed for hardware enablement in certain graphical environments
+
+%files xfirmware-intel
+%dir %{_docdir}/patterns
+%{_docdir}/patterns/zigzag-xfirmware-intel.txt
+
+################################################################################
+
+%package xfirmware-nouveau
+%pattern_basetechnologies
+Summary:        Zigzag Graphical Firmware - Radeon
+Group:          Metapackages
+Provides:       pattern() = zigzag-xfirmware-nouveau
+Provides:       pattern-icon() = pattern-basis
+Provides:       pattern-order() = 1100
+Provides:       pattern-visible()
+
+Requires:       Mesa-dri
+Requires:       Mesa-dri-nouveau
+Requires:       xf86-video-nouveau
+Requires:       libvdpau_nouveau
+
+
+%description xfirmware-nouveau
+Firmware packages needed for hardware enablement in certain graphical environments
+
+%files xfirmware-nouveau
+%dir %{_docdir}/patterns
+%{_docdir}/patterns/zigzag-xfirmware-nouveau.txt
+
+################################################################################
+
+%package xfirmware-radeon
+%pattern_basetechnologies
+Summary:        Zigzag Graphical Firmware - Nouveau
+Group:          Metapackages
+Provides:       pattern() = zigzag-xfirmware-radeon
+Provides:       pattern-icon() = pattern-basis
+Provides:       pattern-order() = 1100
+Provides:       pattern-visible()
+
+Requires:       Mesa-dri
+Requires:       libvulkan1
+Requires:       libvulkan_radeon
 Requires:       xf86-video-amdgpu
 Requires:       xf86-video-ati
 Requires:       libvdpau_radeonsi
 Requires:       libvdpau_r600
+Requires:       libvdpau_r300
 
-# nVidia
-Requires:       xf86-video-nouveau
-Requires:       libvdpau_nouveau
 
-# Intel
-Requires:       Mesa-libva
-Requires:       intel-vaapi-driver
-Requires:       intel-hybrid-driver
-Requires:       libva-vdpau-driver
-Requires:       libvdpau_va_gl
-
-%if 0%{?suse_version} > 1500 || 0%{?sle_version} >= 150100
-Requires:       intel-media-driver
-%endif
-
-%description xfirmware
+%description xfirmware-radeon
 Firmware packages needed for hardware enablement in certain graphical environments
 
-%files xfirmware
+%files xfirmware-radeon
 %dir %{_docdir}/patterns
-%{_docdir}/patterns/zigzag-xfirmware.txt
+%{_docdir}/patterns/zigzag-xfirmware-radeon.txt
 
 ################################################################################
 
@@ -105,6 +146,7 @@ Requires:       yast2-apparmor
 Requires:       yast2-sysconfig
 Requires:       yast2-snapper
 
+
 %description yast
 Minimal useful distribution of YaST control panel
 
@@ -112,7 +154,7 @@ Minimal useful distribution of YaST control panel
 %dir %{_docdir}/patterns
 %{_docdir}/patterns/zigzag-yast.txt
 
-################################################################################
+
 
 %prep
 
@@ -120,7 +162,7 @@ Minimal useful distribution of YaST control panel
 
 %install
 mkdir -p %{buildroot}%{_docdir}/patterns
-for i in zigzag-{firmware,xfirmware,yast}; do
+for i in zigzag-{firmware,xfirmware-intel,xfirmware-nouveau,xfirmware-radeon,yast}; do
     echo "This file marks the pattern $i to be installed." \
     >"%{buildroot}%{_docdir}/patterns/$i.txt"
 done
