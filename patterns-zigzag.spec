@@ -21,6 +21,7 @@ Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
+
 Requires:       kernel-firmware
 Requires:       ucode-intel
 Requires:       ucode-amd
@@ -47,6 +48,7 @@ Provides:       pattern() = zigzag-xfirmware-intel
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
+Obsoletes: patterns-zigzag-xfirmware
 
 Requires:       Mesa-dri
 Requires:       Mesa-libva
@@ -76,6 +78,8 @@ Provides:       pattern() = zigzag-xfirmware-nouveau
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
+Obsoletes: patterns-zigzag-xfirmware
+Conflicts: kmod(nvidia)
 
 Requires:       Mesa-dri
 Requires:       Mesa-dri-nouveau
@@ -100,6 +104,7 @@ Provides:       pattern() = zigzag-xfirmware-radeon
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
+Obsoletes: patterns-zigzag-xfirmware
 
 Requires:       Mesa-dri
 Requires:       libvulkan1
@@ -128,6 +133,7 @@ Provides:       pattern() = zigzag-yast
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
+
 
 Requires:       yast2-control-center-qt
 Requires:       libyui-qt

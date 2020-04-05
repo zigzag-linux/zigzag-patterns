@@ -14,6 +14,9 @@
     },
     "xfirmware-intel": {
         "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "meta": [
+            "Obsoletes: patterns-zigzag-xfirmware"
+        ],
         "packages": [
             "Mesa-dri",
             "Mesa-libva",
@@ -29,6 +32,10 @@
     },
     "xfirmware-nouveau": {
         "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "meta": [
+            "Obsoletes: patterns-zigzag-xfirmware",
+            "Conflicts: kmod(nvidia)"
+        ],
         "packages": [
             "Mesa-dri",
             "Mesa-dri-nouveau",
@@ -39,6 +46,9 @@
     },
     "xfirmware-radeon": {
         "description": "Firmware packages needed for hardware enablement in certain graphical environments",
+        "meta": [
+            "Obsoletes: patterns-zigzag-xfirmware"
+        ],
         "packages": [
             "Mesa-dri",
             "libvulkan1",

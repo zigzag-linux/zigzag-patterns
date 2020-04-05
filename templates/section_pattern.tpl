@@ -8,6 +8,7 @@ Provides:       pattern() = zigzag-$pattern_name
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
+$extra_meta
 
 $required_packages
 

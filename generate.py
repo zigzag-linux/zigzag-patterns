@@ -37,6 +37,7 @@ def render_patterns(patterns):
         "pattern_name": name,
         "pattern_summary": x["summary"],
         "pattern_description": x["description"],
+        "extra_meta": "\n".join(x.get("meta", [])),
         "required_packages": render_requires(x["packages"]),
     }
     rendered_list = [
