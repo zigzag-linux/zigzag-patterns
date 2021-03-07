@@ -139,7 +139,6 @@ Requires:       yast2-control-center-qt
 Requires:       libyui-qt
 Requires:       libyui-qt-pkg
 Requires:       yast2-firewall
-Requires:       yast2-fonts
 Requires:       yast2-country
 Requires:       yast2-users
 Requires:       yast2-sudo
