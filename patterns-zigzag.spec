@@ -159,6 +159,33 @@ Minimal useful distribution of YaST control panel
 %dir %{_docdir}/patterns
 %{_docdir}/patterns/zigzag-yast.txt
 
+################################################################################
+
+%package immutable
+%pattern_basetechnologies
+Summary:        Zigzag Immutable Support
+Group:          Metapackages
+Provides:       pattern() = zigzag-immutable
+Provides:       pattern-icon() = pattern-basis
+Provides:       pattern-order() = 1100
+Provides:       pattern-visible()
+
+
+Requires:       microos-tools
+Requires:       health-checker-plugins-MicroOS
+Requires:       libdnf-plugin-txnupd
+Requires:       libdnf-repo-config-zypp
+Requires:       PackageKit-backend-dnf
+Requires:       toolbox
+
+
+%description immutable
+Base packages for immutable Zigzag system - package management and tooling
+
+%files immutable
+%dir %{_docdir}/patterns
+%{_docdir}/patterns/zigzag-immutable.txt
+
 
 
 %prep
@@ -167,7 +194,7 @@ Minimal useful distribution of YaST control panel
 
 %install
 mkdir -p %{buildroot}%{_docdir}/patterns
-for i in zigzag-{firmware,xfirmware-intel,xfirmware-nouveau,xfirmware-radeon,yast}; do
+for i in zigzag-{firmware,xfirmware-intel,xfirmware-nouveau,xfirmware-radeon,yast,immutable}; do
     echo "This file marks the pattern $i to be installed." \
     >"%{buildroot}%{_docdir}/patterns/$i.txt"
 done

@@ -81,5 +81,17 @@
             "yast2-snapper"
         ],
         "summary": "Zigzag YaST"
+    },
+    "immutable": {
+        "description": "Base packages for immutable Zigzag system - package management and tooling",
+        "packages": [
+            "microos-tools",
+            "health-checker-plugins-MicroOS",
+            "libdnf-plugin-txnupd",
+            "libdnf-repo-config-zypp",
+            "PackageKit-backend-dnf",
+            "toolbox"
+        ],
+        "summary": "Zigzag Immutable Support"
     }
 }
