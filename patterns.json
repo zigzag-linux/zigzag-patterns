@@ -2,7 +2,7 @@
     "firmware": {
         "description": "Firmware packages needed for hardware enablement in certain environments",
         "packages": [
-            "kernel-firmware",
+            "kernel-firmware-all",
             "ucode-intel",
             "ucode-amd",
             "atmel-firmware",
@@ -88,7 +88,6 @@
             "microos-tools",
             "health-checker-plugins-MicroOS",
             "libdnf-plugin-txnupd",
-            "libdnf-repo-config-zypp",
             "PackageKit-backend-dnf",
             "toolbox"
         ],

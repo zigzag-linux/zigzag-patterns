@@ -22,7 +22,7 @@ Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
 
-Requires:       kernel-firmware
+Requires:       kernel-firmware-all
 Requires:       ucode-intel
 Requires:       ucode-amd
 Requires:       atmel-firmware
@@ -174,7 +174,6 @@ Provides:       pattern-visible()
 Requires:       microos-tools
 Requires:       health-checker-plugins-MicroOS
 Requires:       libdnf-plugin-txnupd
-Requires:       libdnf-repo-config-zypp
 Requires:       PackageKit-backend-dnf
 Requires:       toolbox
 
