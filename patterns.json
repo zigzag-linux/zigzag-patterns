@@ -61,26 +61,18 @@
         ],
         "summary": "Zigzag Graphical Firmware - Nouveau"
     },
-    "yast": {
-        "description": "Minimal useful distribution of YaST control panel",
+    "printer": {
+        "description": "Base packages needed for enabling printing support",
         "packages": [
-            "yast2-control-center-qt",
-            "libyui-qt",
-            "libyui-qt-pkg",
-            "yast2-firewall",
-            "yast2-country",
-            "yast2-users",
-            "yast2-sudo",
-            "yast2-bootloader",
-            "yast2-update",
-            "yast2-online-update-frontend",
-            "yast2-ntp-client",
-            "yast2-sound",
-            "yast2-apparmor",
-            "yast2-sysconfig",
-            "yast2-snapper"
+          "OpenPrintingPPDs",
+          "bluez-cups",
+          "cups",
+          "cups-filters",
+          "ghostscript",
+          "udev-configure-printer",
+          "cups-pk-helper"
         ],
-        "summary": "Zigzag YaST"
+        "summary": "Zigzag Printing Support"
     },
     "immutable": {
         "description": "Base packages for immutable Zigzag system - package management and tooling",

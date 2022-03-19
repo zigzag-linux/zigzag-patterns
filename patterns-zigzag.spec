@@ -125,39 +125,31 @@ Firmware packages needed for hardware enablement in certain graphical environmen
 
 ################################################################################
 
-%package yast
+%package printer
 %pattern_basetechnologies
-Summary:        Zigzag YaST
+Summary:        Zigzag Printing Support
 Group:          Metapackages
-Provides:       pattern() = zigzag-yast
+Provides:       pattern() = zigzag-printer
 Provides:       pattern-icon() = pattern-basis
 Provides:       pattern-order() = 1100
 Provides:       pattern-visible()
 
 
-Requires:       yast2-control-center-qt
-Requires:       libyui-qt
-Requires:       libyui-qt-pkg
-Requires:       yast2-firewall
-Requires:       yast2-country
-Requires:       yast2-users
-Requires:       yast2-sudo
-Requires:       yast2-bootloader
-Requires:       yast2-update
-Requires:       yast2-online-update-frontend
-Requires:       yast2-ntp-client
-Requires:       yast2-sound
-Requires:       yast2-apparmor
-Requires:       yast2-sysconfig
-Requires:       yast2-snapper
+Requires:       OpenPrintingPPDs
+Requires:       bluez-cups
+Requires:       cups
+Requires:       cups-filters
+Requires:       ghostscript
+Requires:       udev-configure-printer
+Requires:       cups-pk-helper
 
 
-%description yast
-Minimal useful distribution of YaST control panel
+%description printer
+Base packages needed for enabling printing support
 
-%files yast
+%files printer
 %dir %{_docdir}/patterns
-%{_docdir}/patterns/zigzag-yast.txt
+%{_docdir}/patterns/zigzag-printer.txt
 
 ################################################################################
 
@@ -193,7 +185,7 @@ Base packages for immutable Zigzag system - package management and tooling
 
 %install
 mkdir -p %{buildroot}%{_docdir}/patterns
-for i in zigzag-{firmware,xfirmware-intel,xfirmware-nouveau,xfirmware-radeon,yast,immutable}; do
+for i in zigzag-{firmware,xfirmware-intel,xfirmware-nouveau,xfirmware-radeon,printer,immutable}; do
     echo "This file marks the pattern $i to be installed." \
     >"%{buildroot}%{_docdir}/patterns/$i.txt"
 done
