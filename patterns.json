@@ -1,88 +1,272 @@
 {
-    "firmware": {
-        "description": "Firmware packages needed for hardware enablement in certain environments",
-        "packages": [
-            "kernel-firmware-all",
-            "ucode-intel",
-            "ucode-amd",
-            "atmel-firmware",
-            "bcm20702a1-firmware",
-            "ipw-firmware",
-            "zd1211-firmware"
-        ],
-        "summary": "Zigzag Firmware"
-    },
-    "xfirmware-intel": {
-        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
-        "meta": [
-            "Obsoletes: patterns-zigzag-xfirmware"
-        ],
-        "packages": [
-            "Mesa-dri",
-            "Mesa-libva",
-            "libvulkan1",
-            "libvulkan_intel",
-            "intel-vaapi-driver",
-            "intel-hybrid-driver",
-            "intel-media-driver",
-            "libva-vdpau-driver",
-            "libvdpau_va_gl"
-        ],
-        "summary": "Zigzag Graphical Firmware - Intel"
-    },
-    "xfirmware-nouveau": {
-        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
-        "meta": [
-            "Obsoletes: patterns-zigzag-xfirmware",
-            "Conflicts: kmod(nvidia)"
-        ],
-        "packages": [
-            "Mesa-dri",
-            "Mesa-dri-nouveau",
-            "xf86-video-nouveau",
-            "libvdpau_nouveau"
-        ],
-        "summary": "Zigzag Graphical Firmware - Radeon"
-    },
-    "xfirmware-radeon": {
-        "description": "Firmware packages needed for hardware enablement in certain graphical environments",
-        "meta": [
-            "Obsoletes: patterns-zigzag-xfirmware"
-        ],
-        "packages": [
-            "Mesa-dri",
-            "libvulkan1",
-            "libvulkan_radeon",
-            "xf86-video-amdgpu",
-            "xf86-video-ati",
-            "libvdpau_radeonsi",
-            "libvdpau_r600",
-            "libvdpau_r300"
-        ],
-        "summary": "Zigzag Graphical Firmware - Nouveau"
-    },
-    "printer": {
-        "description": "Base packages needed for enabling printing support",
-        "packages": [
-          "OpenPrintingPPDs",
-          "bluez-cups",
-          "cups",
-          "cups-filters",
-          "ghostscript",
-          "udev-configure-printer",
-          "cups-pk-helper"
-        ],
-        "summary": "Zigzag Printing Support"
-    },
-    "immutable": {
-        "description": "Base packages for immutable Zigzag system - package management and tooling",
-        "packages": [
-            "microos-tools",
-            "health-checker-plugins-MicroOS",
-            "libdnf-plugin-txnupd",
-            "PackageKit-backend-dnf",
-            "toolbox"
-        ],
-        "summary": "Zigzag Immutable Support"
-    }
+  "firmware": {
+    "packages": [
+      "kernel-firmware-all",
+      "ucode-intel",
+      "ucode-amd",
+      "atmel-firmware",
+      "bcm20702a1-firmware",
+      "ipw-firmware",
+      "zd1211-firmware"
+    ],
+    "summary": "Zigzag firmware"
+  },
+  "xfirmware-intel": {
+    "meta": [
+      "Obsoletes: patterns-zigzag-xfirmware"
+    ],
+    "packages": [
+      "Mesa-dri",
+      "Mesa-libva",
+      "libvulkan1",
+      "libvulkan_intel",
+      "intel-vaapi-driver",
+      "intel-hybrid-driver",
+      "intel-media-driver",
+      "libva-vdpau-driver",
+      "libvdpau_va_gl"
+    ],
+    "summary": "Zigzag graphical firmware - Intel"
+  },
+  "xfirmware-nouveau": {
+    "meta": [
+      "Obsoletes: patterns-zigzag-xfirmware",
+      "Conflicts: kmod(nvidia)"
+    ],
+    "packages": [
+      "Mesa-dri",
+      "Mesa-dri-nouveau",
+      "xf86-video-nouveau",
+      "libvdpau_nouveau"
+    ],
+    "summary": "Zigzag graphical firmware - Radeon"
+  },
+  "xfirmware-radeon": {
+    "meta": [
+      "Obsoletes: patterns-zigzag-xfirmware"
+    ],
+    "packages": [
+      "Mesa-dri",
+      "libvulkan1",
+      "libvulkan_radeon",
+      "xf86-video-amdgpu",
+      "xf86-video-ati",
+      "libvdpau_radeonsi",
+      "libvdpau_r600",
+      "libvdpau_r300"
+    ],
+    "summary": "Zigzag graphical firmware - Nouveau"
+  },
+  "printer": {
+    "packages": [
+      "OpenPrintingPPDs",
+      "bluez-cups",
+      "cups",
+      "cups-filters",
+      "ghostscript",
+      "udev-configure-printer",
+      "cups-pk-helper"
+    ],
+    "summary": "Zigzag printing support"
+  },
+  "immutable": {
+    "packages": [
+      "microos-tools",
+      "health-checker-plugins-MicroOS",
+      "libdnf-plugin-txnupd",
+      "PackageKit-backend-dnf",
+      "podman",
+      "toolbox"
+    ],
+    "summary": "Zigzag immutable"
+  },
+  "apparmor": {
+    "packages": [
+      "apparmor-profiles",
+      "apparmor-parser"
+    ],
+    "summary": "Zigzag AppArmor support"
+  },
+  "base": {
+    "packages": [
+      "patterns-base-minimal_base",
+      "mozilla-nss-certs",
+      "openSUSE-signkey-cert",
+      "kernel-default-optional",
+      "grub2-branding-openSUSE",
+      "grub2-snapper-plugin",
+      "grub2-i386-pc",
+      "grub2-x86_64-efi",
+      "syslinux"
+    ],
+    "summary": "Zigzag barebone base"
+  },
+  "utils": {
+    "packages": [
+      "sudo",
+      "shim",
+      "system-group-wheel",
+      "finger",
+      "time",
+      "timezone",
+      "man",
+      "psmisc",
+      "lsof",
+      "curl",
+      "less",
+      "openssh",
+      "iproute2",
+      "iputils",
+      "iw",
+      "crda",
+      "audit",
+      "avahi",
+      "zigzag-languages",
+      "bash-completion",
+      "vim-small",
+      "rpmconf",
+      "deltarpm",
+      "sensors",
+      "dmidecode",
+      "hdparm",
+      "sysfsutils",
+      "pciutils",
+      "usbutils",
+      "fwupd",
+      "smartmontools",
+      "cryptsetup",
+      "tar",
+      "unar",
+      "p7zip",
+      "xfsprogs",
+      "btrfsprogs",
+      "btrfsmaintenance",
+      "e2fsprogs",
+      "ntfsprogs",
+      "dosfstools",
+      "f2fs-tools",
+      "polkit-default-privs"
+    ],
+    "summary": "Zigzag system utilities"
+  },
+  "desktop": {
+    "packages": [
+      "flatpak",
+      "zigzag-wallpapers",
+      "xdg-user-dirs",
+      "xdg-utils",
+      "gsettings-backend-dconf",
+      "bluez-firmware",
+      "udisks2",
+      "fonts-config",
+      "iosevka-fonts-mini",
+      "noto-sans-fonts",
+      "noto-sans-sc-fonts",
+      "noto-sans-jp-fonts",
+      "noto-coloremoji-fonts",
+      "zram-generator",
+      "earlyoom",
+      "samba",
+      "samba-client",
+      "cifs-utils"
+    ],
+    "summary": "Zigzag base desktop"
+  },
+  "network": {
+    "packages": [
+      "systemd-network",
+      "NetworkManager",
+      "NetworkManager-openvpn"
+    ],
+    "summary": "Zigzag network stack"
+  },
+  "laptop": {
+    "packages": [
+      "powertop",
+      "thermald",
+      "tlp",
+      "tlp-rdw"
+    ],
+    "summary": "Zigzag laptop utils"
+  },
+  "plasma": {
+    "packages": [
+      "bluedevil5",
+      "colord-kde",
+      "ffmpegthumbs",
+      "gtk3-metatheme-breeze",
+      "kcm_tablet",
+      "kde-gtk-config5-gtk3",
+      "kdegraphics-thumbnailers",
+      "kdenetwork-filesharing",
+      "kgamma5",
+      "kio-extras5",
+      "ksshaskpass5",
+      "plasma5-thunderbolt",
+      "plasma5-systemmonitor",
+      "plasma5-disks",
+      "pam_kwallet",
+      "phonon4qt5-backend-gstreamer",
+      "pinentry-qt5",
+      "plasma-nm5-openvpn",
+      "plasma5-defaults-zigzag",
+      "plasma5-pa",
+      "plasma5-session",
+      "plasma5-session-wayland",
+      "sddm",
+      "xdg-desktop-portal-kde",
+      "xdg-desktop-portal-gtk"
+    ],
+    "summary": "Zigzag Plasma Desktop"
+  },
+  "plasma-apps": {
+    "packages": [
+      "dolphin",
+      "konsole",
+      "ark",
+      "kcolorchooser",
+      "discover",
+      "discover-notifier",
+      "discover-backend-flatpak",
+      "discover-backend-packagekit",
+      "discover-backend-fwupd",
+      "kwalletmanager5",
+      "spectacle"
+    ],
+    "summary": "Zigzag Plasma Desktop applications"
+  },
+  "gfx": {
+    "packages": [
+      "Mesa-demo-x",
+      "vulkan-tools",
+      "libva-utils",
+      "libva-glx2",
+      "xf86-input-libinput",
+      "xf86-video-vmware"
+    ],
+    "summary": "Zigzag graphics stack"
+  },
+  "audio": {
+    "packages": [
+      "alsa-firmware",
+      "alsa-utils",
+      "pipewire",
+      "pipewire-modules",
+      "pipewire-alsa",
+      "pipewire-pulseaudio",
+      "gstreamer-plugin-pipewire"
+    ],
+    "summary": "Zigzag audio stack"
+  },
+  "xorg": {
+    "packages": [
+      "xorg-x11-essentials",
+      "xorg-x11-server",
+      "xorg-x11-fonts",
+      "xorg-x11-driver-video",
+      "xrandr",
+      "xclip"
+    ],
+    "summary": "Zigzag X.org"
+  }
 }

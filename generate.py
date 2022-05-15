@@ -36,7 +36,7 @@ def render_patterns(patterns):
     get_input_vars = lambda name, x: {
         "pattern_name": name,
         "pattern_summary": x["summary"],
-        "pattern_description": x["description"],
+        "pattern_description": x.get("description", x["summary"]),
         "extra_meta": "\n".join(x.get("meta", [])),
         "required_packages": render_requires(x["packages"]),
     }
